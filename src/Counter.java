@@ -10,10 +10,7 @@ public class Counter {
     public void count(File txt, File res) {
         try {
             Scanner scanner = new Scanner(txt);
-            while (true) {
-                if (!scanner.hasNextLine()) {
-                    break;
-                }
+            while (scanner.hasNextLine()) {
                 String nextLine = scanner.nextLine();
                 String[] words = nextLine.split(" |,|\\.|\n");
                 for (String s : words) {
